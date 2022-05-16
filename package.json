@@ -4,7 +4,8 @@
   "description": "the first real project on my career",
   "main": "index.ts",
   "scripts": {
-    "test": "run npm build && npm jasmine"
+    "test": "run npm build && npm jasmine",
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
