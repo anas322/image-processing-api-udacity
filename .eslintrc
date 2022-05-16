@@ -1,0 +1,11 @@
+//source https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/#:~:text=%7B%0A%20%20%22root%22%3A%20true%2C%0A%20%20%22parser%22%3A%20%22%40typescript%2Deslint/parser%22%2C%0A%20%20%22plugins%22%3A%20%5B%0A%20%20%20%20%22%40typescript%2Deslint%22%0A%20%20%5D%2C%0A%20%20%22extends%22%3A%20%5B%0A%20%20%20%20%22eslint%3Arecommended%22%2C%0A%20%20%20%20%22plugin%3A%40typescript%2Deslint/eslint%2Drecommended%22%2C%0A%20%20%20%20%22plugin%3A%40typescript%2Deslint/recommended%22%0A%20%20%5D%0A%7D
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
+}
