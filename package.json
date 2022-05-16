@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "jasmine": "jasmine",
-    "test": "run npm build && npm jasmine"
+    "test": "run npm build && npm jasmine",
+    "start": "nodemone src/index.ts"
   },
   "repository": {
     "type": "git",
