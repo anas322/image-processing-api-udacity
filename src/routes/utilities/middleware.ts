@@ -5,12 +5,10 @@ import {
   checkIfThumbExist,
 } from '../utilities/image';
 
-const routes = express.Router();
-
 export const validate = async (
   req: express.Request,
   res: express.Response,
-  next: Function
+  next: express.NextFunction
 ) => {
   const filename = req.query.filename as unknown as string;
   const width = parseInt(req.query.width as string);
