@@ -1,0 +1,29 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "the first real project on my career",
+  "main": "index.ts",
+  "scripts": {
+    "test": "run npm build && npm jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anas322/image-processing-api-udacity.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Anas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anas322/image-processing-api-udacity/issues"
+  },
+  "homepage": "https://github.com/anas322/image-processing-api-udacity#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jasmine": "^4.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "sharp": "^0.30.4",
+    "supertest": "^6.2.3"
+  }
+}
