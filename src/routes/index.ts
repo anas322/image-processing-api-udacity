@@ -6,7 +6,7 @@ const routes = express.Router();
 routes.get(
   '/api/image',
   validate,
-  async (req: express.Request, res: express.Response) => {
+  async (req: express.Request, res: express.Response): Promise<void> => {
     //try make the thumb image and response with it or send an error message
     try {
       const response = await createThumbedImage(req.query);
