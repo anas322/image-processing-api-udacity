@@ -22,14 +22,14 @@ routes.get('/api/image', middleware_1.validate, (req, res) => __awaiter(void 0, 
         const response = yield (0, image_1.createThumbedImage)(req.query);
         if (response.type === 'success') {
             const thumbName = `${req.query.filename}_${req.query.width}-${req.query.height}.jpg`;
-            return res.sendFile(`/${thumbName}`, { root: 'src/public/thumb' });
+            res.sendFile(`/${thumbName}`, { root: 'src/public/thumb' });
         }
         else if (response.type === 'error') {
-            return res.send(response.data);
+            res.send(response.data);
         }
     }
     catch (_a) {
-        return res.send('what did you do dude :|');
+        res.send('what did you do dude :|');
     }
 }));
 exports.default = routes;
