@@ -17,7 +17,7 @@ export const validate = async (
   //check if filename exist
   if (!filename) {
     return res.send(
-      'please select a filename, width and height of the image appropriately'
+      '<p style="font-size:2.5rem">please select a filename, width and height of the image appropriately\n example: <strong>http://localhost:3000/api/image/?filename=image1.jpg&width=500&height=500</strong></p>'
     );
   }
 

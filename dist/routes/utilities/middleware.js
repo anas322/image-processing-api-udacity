@@ -17,7 +17,7 @@ const validate = (req, res, next) => __awaiter(void 0, void 0, void 0, function*
     const height = parseInt(req.query.height);
     //check if filename exist
     if (!filename) {
-        return res.send('please select a filename, width and height of the image appropriately');
+        return res.send('<p style="font-size:2.5rem">please select a filename, width and height of the image appropriately\n example: <strong>http://localhost:3000/api/image/?filename=image1.jpg&width=500&height=500</strong></p>');
     }
     //check if image not exit
     if (!(0, image_1.checkIfImageExist)(filename)) {

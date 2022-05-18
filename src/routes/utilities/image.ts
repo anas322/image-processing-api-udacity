@@ -9,6 +9,11 @@ interface QueryParams {
   height?: string;
 }
 
+interface ObjectData {
+  data: string;
+  type: string;
+}
+
 const checkIfImageExist = (filename: string): boolean => {
   return fs.existsSync(`${imageFilePath}/${filename}.jpg`);
 };
@@ -32,9 +37,7 @@ const getAllImagesNames = (): string[] => {
   return names;
 };
 
-const createThumbedImage = async (
-  query: QueryParams
-): Promise<null | string> => {
+const createThumbedImage = async (query: QueryParams): Promise<ObjectData> => {
   const imageFrom = `${imageFilePath}/${query.filename}.jpg`;
   const thumbName = `${query.filename}_${query.width}-${query.height}.jpg`;
   const imageTo = `${imageThumbPath}/${thumbName}`;

@@ -14,17 +14,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sharp_1 = __importDefault(require("sharp"));
 //process image in the range of it's dimensions
+//@return image path when successfuly created or return error message
 const processImage = (image) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield (0, sharp_1.default)(image.imageFrom)
             .resize(image.width, image.height)
             .jpeg()
             .toFile(image.imageTo);
-        return null;
+        return { data: image.imageTo.slice(4), type: 'success' };
     }
     catch (_a) {
         const dimensions = yield (0, sharp_1.default)(image.imageFrom).metadata();
-        return `<p style ="font-size:2.5rem" >image can't be procced, please specify width between<strong> 1 and ${dimensions.width}</strong> and height between <strong>1 and ${dimensions.height}</strong></p>`;
+        return {
+            data: `<p style ="font-size:2.5rem" >image can't be procced, please specify width between<strong> 1 and ${dimensions.width}</strong> and height between <strong>1 and ${dimensions.height}</strong></p>`,
+            type: 'error',
+        };
     }
 });
 exports.default = processImage;

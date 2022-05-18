@@ -9,3 +9,5 @@ app.use(routes);
 app.listen(port, () => {
   console.log('server working :)');
 });
+
+export default app;
